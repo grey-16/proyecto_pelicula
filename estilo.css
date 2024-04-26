@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    width: auto;
+    list-style: none;
+    color: #fff;
+}
+
+body{
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    background-color: #181419;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #181419;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: darkred;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 1px solid #181419;  /* creates padding around scroll thumb */
+}
+
+a{
+
+    text-decoration: none;
+}
+header,footer{
+    background-color: darkred;
+    height: 100px;
+    
+}
+
+.logo{
+    height: 45px;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 20px;
+    transition: transform 1s;
+}
+
+.logo:hover{
+    transform: rotateY(10deg);
+}
+
+.navegacion{
+    height: 90px;
+    padding-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 12px;
+}
+
+.lista-menu{
+    display: inline-flex;
+}
+
+.item-menu{
+    height: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top:10px;
+    padding: 10px 12px;
+    font-size: 20px;
+
+}
+.item-menu.iniciosesion{
+    background-color: black;
+    border-radius: 5px;
+    border: black 1px solid;
+}
+
+
+.item-menu:hover {
+    border: white 1px solid;
+    border-radius: 8px;
+}
+
+
+section{
+    text-align: center;
+}
+
+#principal{
+    background-image: url(../primer_proyecto/imagenes/banner_bg1.jpg);
+    background-size: cover;
+    height: 500px;
+    animation: animaElemento 1.5s;
+
+}
+
+@keyframes animaElemento{
+    from{
+        transform: scale(0);
+        opacity: .5;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+#titulo-principal{
+    font-size: 55px;
+    padding: 30px 0;
+    
+}
+
+#titulo-secundario{
+    font-size: 38px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+}
+
+.boton-registro{
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background-color: brown;
+    font-size: 30px; 
+}
+.boton-registro:hover{
+    border: white 2px solid;
+    box-shadow: 0 0 10px #fff;
+}
+
+#tendencia, .seccion-peliculas{
+    margin-top: 40px;
+    padding: 70px 0;
+    animation: animaSeccion 2s ease-in 0s 1 normal forwards;
+}
+@keyframes animaSeccion {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.2;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+.titulo-h2{
+    margin-bottom: 50px;
+    font-size: 35px;
+}
+
+
+.texto-buscar{
+   
+    border-radius: 25px;
+    text-align: left;
+    width: 30%;
+    height: 50px;
+    margin-right: 15px;
+
+}
+
+.boton-buscar{
+    padding: 10px 20px;
+    background-color: brown;
+    font-size: 18px;
+    border-radius: 25px;
+    border: white 2px solid;
+    margin-right: 20px;
+}
+
+.boton-buscar:hover{
+    box-shadow: 0 0 10px #fff;
+    text-shadow: 0 0 4px #fff;
+    transform: scale(0.9);
+}
+hr{
+    margin: 80px;
+    border: brown 1px solid;
+}
+
+.peliculas{
+    width: 80%;
+    min-height: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.contenedor-pelicula{
+    width: 200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.contenedor-pelicula img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.titulo-pelicula{
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    width: 100%;
+    display:none;
+}
+
+.contenedor-pelicula img:hover{
+    filter: blur(8px);
+}
+
+.contenedor-pelicula:hover .titulo-pelicula{
+    display:block;
+    color:black;
+    font-size: 30px;
+    font-weight: bold;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+
+.seccion-peliculas li img{
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.tendencia-peliculas{
+    margin: 0 85px; 
+}
+
+#aclamadas{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    overflow-x: scroll;
+    overscroll-behavior-x:contain;
+    scroll-snap-type: x proximity;
+}
+
+#aclamadas img{
+    margin-left: 50px;
+}
+
+
+.flecha-arriba img{
+    height: 6%;   
+    width: 3%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+
+   
+    
