@@ -90,7 +90,7 @@ section{
 }
 
 #principal{
-    background-image: url(../primer_proyecto/imagenes/banner_bg1.jpg);
+    background-image: url(banner_bg1.jpg);
     background-size: cover;
     height: 500px;
     animation: animaElemento 1.5s;
