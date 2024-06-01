@@ -28,6 +28,7 @@ body::-webkit-scrollbar {
     border: 1px solid #181419;  /* creates padding around scroll thumb */
 }
 
+
 a{
 
     text-decoration: none;
@@ -44,19 +45,23 @@ header,footer{
     margin-left: 10px;
     font-size: 20px;
     transition: transform 1s;
+    color: #fff;
 }
 
 .logo:hover{
     transform: rotateY(10deg);
 }
 
-.navegacion{
+#navegacion{
     height: 90px;
     padding-top: 35px;
     display: flex;
     justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 12px;
+}
+
+.nav-registro{
+    display: flex;
+    padding-top: 30px;
 }
 
 .lista-menu{
@@ -266,6 +271,88 @@ hr{
     bottom: 30px;
     right: 30px;
 }
+
+.body-inicio-sesion{
+    background-image: url(imagenes/fondo_iniciosesion.jpg);
+}
+
+#contenedor-inicio-sesion{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    animation: animarElemento 1.5s;
+
+}
+
+@keyframes animarElemento{
+    from{
+        transform: scale(0);
+        opacity: .5;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+.formulario{
+    background-color: #000;
+    height: auto;
+    width: 40%;
+    text-align: center;
+    margin-top: 5%;
+    padding-bottom: 5%;
+}
+
+.formulario h1{
+   padding: 50px;
+}
+
+.input-inicio{
+    width: 80%;
+    padding: 14px 0;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border-style: solid;
+    border: darkred solid 3px  ;
+    background-color: #333333; 
+}
+
+.input-inicio::placeholder {
+    color:#D8D2D2;
+    font-size: 16px;
+    text-indent: 30px;
+}
+
+.btn-registrarse{
+    width: 30%;
+    height: 30px;
+    background-color: darkred;
+    cursor: pointer;
+}
+
+.titulo-h1{
+
+    padding: 40px;
+    font-size: 40px;
+}
+
+#contenedor-api{
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 30px;   
+}
+
+#contenedor-personajes{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+
 
 
    
