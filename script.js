@@ -1,33 +1,36 @@
-function validar(){
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("form-inicio-sesion").addEventListener('submit', validarFormulario); 
+  });
 
-    const formulario = document.querySelector("form")
+  
 
-    formulario.addEventListener("submit", (event)=>{
-        if (!validacion()){
-            Swal.fire({
-                type: "error",
-                title: "Debe llenar todos los campos",
-              });
-              event.preventDefault()
-        }else{
-            swal({
-                title: 'Bienvenido',
-                type: 'success',
-                confirmButtonColor: '#3085d6',
-                confirmButtonText: 'Aceptar'
-              }).then((result) => {
-                if (result.value) {
-                  window.location.href = "index.html";
-                }
-              })
-
-        }
-    })
+  function validarFormulario(evento) {
     
+    if (!validacion()){
+        evento.preventDefault();
+        Swal.fire({
+            icon: "error",
+            title: "Atención",
+            text: "Los campos no pueden estar vacíos"
+          });
+    }else{
+        if (!validarEmail(document.getElementById("email").value)) {
+            evento.preventDefault();
+            Swal.fire({
+                icon: "error",
+                title: "Atención",
+                text: "El formato del email es inválido"
+              });
+        }else{
+                alert("Bienvenido")
+           }
+    } 
+
+
+
     function validacion(){
         let email= document.getElementById("email").value
         let pass= document.getElementById("pass").value
-
         if (email==="" || pass ===""){
             return false
         }else{
@@ -35,7 +38,13 @@ function validar(){
         }
     }
 
+
+    function validarEmail(email) {
+        const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,6}$/;
+        return pattern.test(email);
+    }
+    
+ 
+    
+
 }
-
-
-s

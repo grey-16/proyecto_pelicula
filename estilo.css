@@ -332,6 +332,11 @@ hr{
     cursor: pointer;
 }
 
+.btn-registrarse:hover{
+    width: 27%;
+    height: 27px;
+}
+
 .titulo-h1{
 
     padding: 40px;
@@ -351,7 +356,6 @@ hr{
     flex-wrap: wrap;
     gap: 50px;
 }
-
 
 
 

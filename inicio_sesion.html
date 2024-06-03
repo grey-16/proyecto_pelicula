@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="estilo.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.10/dist/sweetalert2.all.min.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Inicio Sesión</title>
+
 </head>
+
 <body class="body-inicio-sesion">
     <header>
         <nav id="navegacion">
@@ -25,11 +26,11 @@
         <section id="contenedor-inicio-sesion">
             <div class="formulario">
                 <h1>Iniciar Sesión</h1>
-                <form action="#" id="form-inicio-sesion" method="get">
-                    <input type="email" class="input-inicio" id="email" placeholder="Email">
+                <form action="index.html" id="form-inicio-sesion" method="get">
+                    <input type="text" class="input-inicio" id="email" placeholder="Email" autofocus>
                     <input type="password" class="input-inicio" id="pass" placeholder="Contraseña">
                     <input type="button" class="btn-registrarse" value="Registrarse">
-                    <input type="submit" class="btn-registrarse" onclick="validar()" value="Iniciar Sesión">
+                    <input type="submit" class="btn-registrarse"  value="Iniciar Sesión">
                 </form>
             </div>
             
